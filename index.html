@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>이문규 · 코드잇 기업교육 어카운트 매니저 지원 포트폴리오</title>
+<meta name="description" content="코드잇 기업교육 어카운트 매니저 지원을 위해 이문규가 직접 만든 B2B 어카운트 매니지먼트 포트폴리오입니다. 코드잇 공식 페이지가 아닙니다.">
+<script>
+/* ============================================================
+   상세 노션 페이지 링크 설정 (여기만 수정하면 버튼과 카드 링크가 한 번에 바뀝니다)
+   ============================================================ */
+const portfolioLinks = {
+  toss: "https://app.notion.com/p/41d5db893fbb81e49708e8ddb5697145?pvs=204",
+  doit: "https://app.notion.com/p/41d5db893fbb81909348eaf81aeb278e?pvs=204",
+  coupang: "https://app.notion.com/p/41d5db893fbb812db0cfecdd4ce5bc35?pvs=204",
+  nonghyup: "https://app.notion.com/p/41d5db893fbb81548743e03b80d9a3cb?pvs=204",
+  ai: "https://app.notion.com/p/41d5db893fbb81e4865fc07534527cd1?pvs=204"
+};
+</script>
+<style>
+:root{
+  --p:#6500C3; --p-dark:#4A0092; --p-tint:#F5EEFB; --p-line:#E3D0F5;
+  --ink:#1A1A1F; --sub:#52525B; --bg:#FFFFFF; --bg2:#F7F7F9; --line:#E8E8EE;
+  --mint:#0A7D5C; --mint-tint:#E8F6F1;
+  --w:1200px;
+  --font:Pretendard,"Pretendard Variable",SUIT,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--font);font-size:16px;line-height:1.7;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0;letter-spacing:-.01em}
+p{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+:focus-visible{outline:3px solid var(--p);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 32px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--p);color:#fff;padding:10px 16px;z-index:200;border-radius:6px}
+.skip:focus{left:8px}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);z-index:100}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:100%}
+.brand{font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--sub);font-weight:500}
+.menu{display:flex;gap:4px}
+.menu a{display:block;padding:8px 12px;font-size:15px;text-decoration:none;color:var(--sub);border-radius:6px;font-weight:500}
+.menu a:hover{color:var(--p)}
+.menu a.on{color:var(--p);font-weight:700}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:44px;height:44px;cursor:pointer;color:var(--ink)}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:var(--p)}
+
+/* hero */
+.hero{padding:132px 0 56px;}
+.hero-grid{display:grid;grid-template-columns:1fr 240px;gap:56px;align-items:start}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.08em;color:var(--p);margin-bottom:20px}
+.hero h1{font-size:46px;font-weight:800;line-height:1.28;margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--p)}
+.lead{font-size:18px;line-height:1.75;color:var(--sub);max-width:720px}
+.profile{border-left:3px solid var(--p);padding-left:20px}
+.profile img{width:132px;height:158px;object-fit:cover;border-radius:6px;margin-bottom:16px}
+.profile .nm{font-size:22px;font-weight:800}
+.profile .rl{font-size:15px;color:var(--sub);margin:2px 0 12px}
+.profile a{display:block;font-size:15px;text-decoration:none;color:var(--ink);padding:2px 0}
+.profile a:hover{color:var(--p);text-decoration:underline}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;border:2px solid var(--p);cursor:pointer;font-family:inherit}
+.btn.fill{background:var(--p);color:#fff}
+.btn.fill:hover{background:var(--p-dark);border-color:var(--p-dark)}
+.btn.line{background:#fff;color:var(--p)}
+.btn.line:hover{background:var(--p-tint)}
+.course{display:grid;grid-template-columns:repeat(4,1fr);margin-top:56px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.course div{padding:20px 20px 20px 0}
+.course div+div{padding-left:20px;border-left:1px solid var(--line)}
+.course dt{font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--p);text-transform:uppercase}
+.course dd{margin:4px 0 0;font-size:15px;line-height:1.55}
+
+/* sections */
+section{padding:88px 0}
+.alt{background:var(--bg2)}
+.sec-h{max-width:760px;margin-bottom:44px}
+.sec-h .eyebrow{margin-bottom:12px}
+.sec-h h2{font-size:34px;font-weight:800;margin-bottom:14px}
+.sec-h p{color:var(--sub);font-size:17px}
+
+/* dashboard */
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink)}
+.metric{padding:24px 24px 28px 0;border-bottom:1px solid var(--line)}
+.metric:nth-child(4n+2),.metric:nth-child(4n+3),.metric:nth-child(4n+4){padding-left:24px}
+.metric:not(:nth-child(4n+1)){border-left:1px solid var(--line)}
+.metric .tag{font-size:14px;font-weight:700;color:var(--sub);letter-spacing:.04em}
+.metric .num{font-size:30px;font-weight:800;color:var(--p);line-height:1.25;margin:8px 0 8px}
+.metric .num small{font-size:16px;font-weight:700}
+.metric .ctx{font-size:15px;line-height:1.6;color:var(--ink)}
+.metric .note{display:block;margin-top:8px;font-size:14px;line-height:1.5;color:var(--mint);font-weight:600}
+.fine{margin-top:20px;font-size:14px;color:var(--sub)}
+
+/* skills */
+.skill{display:grid;grid-template-columns:72px 1.1fr 1.3fr;gap:28px;padding:30px 0;border-top:1px solid var(--line)}
+.skill:last-child{border-bottom:1px solid var(--line)}
+.skill .no{font-size:30px;font-weight:800;color:var(--p-line)}
+.skill h3{font-size:21px;font-weight:700;margin-bottom:10px}
+.skill ul li{position:relative;padding-left:16px;font-size:16px}
+.skill ul li::before{content:"";position:absolute;left:0;top:.8em;width:6px;height:2px;background:var(--p)}
+.skill .chips li{padding:6px 12px}
+.skill .chips li::before{display:none}
+.ev{font-size:14px;font-weight:700;color:var(--sub);margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-size:14px;line-height:1.4;padding:6px 12px;background:var(--p-tint);color:var(--p-dark);border-radius:999px;font-weight:600}
+
+/* curriculum */
+.curr{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.toc{position:sticky;top:84px}
+.toc ol{border-left:2px solid var(--line)}
+.toc button{display:block;width:100%;text-align:left;background:none;border:0;border-left:3px solid transparent;margin-left:-2px;padding:14px 16px;font-family:inherit;font-size:16px;color:var(--sub);cursor:pointer;line-height:1.45}
+.toc button b{display:block;font-size:14px;letter-spacing:.08em;color:var(--sub)}
+.toc button:hover{color:var(--p)}
+.toc button[aria-selected="true"]{border-left-color:var(--p);color:var(--ink);font-weight:700;background:var(--p-tint)}
+.toc button[aria-selected="true"] b{color:var(--p)}
+.mod{display:none}
+.mod.open{display:block}
+.mod-head{display:none;width:100%;text-align:left;background:#fff;border:0;border-top:1px solid var(--line);padding:18px 0;font-family:inherit;cursor:pointer;color:var(--ink)}
+.mod-head b{display:block;font-size:14px;color:var(--p);letter-spacing:.08em}
+.mod-head span{display:block;font-size:18px;font-weight:700;line-height:1.4;padding-right:36px;position:relative}
+.mod-head span::after{content:"+";position:absolute;right:4px;top:0;font-size:24px;color:var(--p)}
+.mod.open .mod-head span::after{content:"–"}
+.ext{font-weight:800}
+.mod-top .co{font-size:14px;font-weight:700;color:var(--p);letter-spacing:.04em}
+.mod-top h3{font-size:30px;font-weight:800;margin:6px 0 14px}
+.mod-top .one{font-size:18px;line-height:1.7;color:var(--sub);padding-bottom:28px;border-bottom:1px solid var(--line)}
+.blk{padding:28px 0;border-bottom:1px solid var(--line)}
+.blk h4{font-size:15px;font-weight:700;color:var(--p);letter-spacing:.04em;margin-bottom:14px}
+.ul li{position:relative;padding-left:18px;margin-bottom:6px}
+.ul li::before{content:"";position:absolute;left:0;top:.78em;width:6px;height:6px;border-radius:50%;background:var(--p)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.ba h5{font-size:15px;font-weight:700;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);color:var(--sub)}
+.ba .af h5{color:var(--p);border-color:var(--p)}
+.steps li{display:grid;grid-template-columns:28px 1fr;gap:6px;padding:7px 0}
+.steps li i{font-style:normal;font-weight:800;color:var(--sub)}
+.af .steps li i{color:var(--p)}
+.steps li+li{border-top:1px dashed var(--line)}
+.tag-note{display:inline-block;font-size:14px;color:var(--sub);background:var(--bg2);border-radius:6px;padding:4px 10px;margin-bottom:14px}
+.res{display:flex;flex-wrap:wrap;gap:28px}
+.res div{min-width:200px}
+.res b{display:block;font-size:24px;line-height:1.35;color:var(--p);font-weight:800}
+.res span{font-size:15px;color:var(--sub);line-height:1.5;display:block}
+.details-box{margin-top:28px;padding:16px 0 4px;border-top:1px dashed var(--p-line)}
+.details-box .dt{font-size:14px;font-weight:800;letter-spacing:.1em;color:var(--p)}
+.details-box p{margin-top:4px;color:var(--sub);font-size:16px}
+.btn-detail{margin-top:16px !important}
+.callout{margin:28px 0 0;padding:4px 0 4px 20px;border-left:3px solid var(--p)}
+.callout b{display:block;font-size:14px;color:var(--p);letter-spacing:.06em;margin-bottom:4px}
+.warn{margin-top:16px;padding:14px 16px;background:var(--mint-tint);border-radius:8px;font-size:15px;line-height:1.65;color:#0B4F3B}
+.tl{position:relative;margin-left:8px;border-left:2px solid var(--p-line);padding-left:26px}
+.tl li{position:relative;padding:4px 0 14px}
+.tl li::before{content:"";position:absolute;left:-34px;top:11px;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--p)}
+.tl li b{font-size:14px;color:var(--p);letter-spacing:.06em;display:block}
+.flow{display:flex;flex-wrap:wrap;gap:8px 6px;align-items:center}
+.flow span{font-size:15px;padding:6px 12px;background:var(--bg2);border-radius:6px}
+.flow i{font-style:normal;color:var(--p);font-weight:800}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+details{margin-top:12px}
+summary{cursor:pointer;font-weight:700;font-size:15px;color:var(--p);padding:6px 0}
+.btn-detail{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;margin-top:28px;min-height:48px;padding:10px 22px;border:2px solid var(--p);border-radius:8px;color:var(--p);font-weight:700;text-decoration:none;font-size:16px;background:#fff}
+.btn-detail:hover{background:var(--p-tint)}
+
+/* connect */
+.link-row{display:grid;grid-template-columns:1fr 64px 1fr;align-items:center;padding:16px 0;border-top:1px solid var(--line)}
+.link-row:last-child{border-bottom:1px solid var(--line)}
+.link-row .l{color:var(--sub);padding-right:8px}
+.link-row .m{text-align:center;color:var(--p);font-size:22px;font-weight:700;line-height:1}
+.link-row .r{font-weight:600;padding-left:8px}
+.link-head{display:grid;grid-template-columns:1fr 64px 1fr;font-size:14px;font-weight:700;color:var(--p);letter-spacing:.05em;padding-bottom:10px}
+.link-head span:first-child{padding-right:8px}.link-head span:last-child{padding-left:8px}
+
+/* ai */
+.ai-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px}
+.ai-grid p+p{margin-top:16px}
+.tools h3{font-size:16px;color:var(--p);margin-bottom:12px}
+.tools .chips{margin-bottom:22px}
+.tools .chips li{background:#fff;border:1px solid var(--p-line)}
+
+/* why */
+.why-intro{font-size:20px;line-height:1.7;max-width:820px;margin-bottom:44px;font-weight:600}
+.reason{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:34px 0;border-top:1px solid var(--line)}
+.reason .n{font-size:20px;font-weight:800;color:var(--p)}
+.reason h3{font-size:24px;font-weight:800;margin-bottom:14px}
+.close{margin-top:40px;padding-top:28px;border-top:2px solid var(--p);font-size:19px;font-weight:600;max-width:820px}
+
+/* plan */
+.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.plan div{padding:26px 28px 8px 0}
+.plan div+div{padding-left:28px;border-left:1px solid var(--line)}
+.plan b{display:block;font-size:14px;letter-spacing:.08em;color:var(--p);margin-bottom:6px}
+.plan h3{font-size:22px;font-weight:800;margin-bottom:12px}
+.plan-note{margin-top:24px;color:var(--sub);font-size:16px}
+
+/* contact */
+.contact{background:var(--ink);color:#fff}
+.contact .eyebrow{color:#D9B8F5}
+.contact h2{font-size:34px;font-weight:800;margin-bottom:12px}
+.contact .sub{color:#C9C9D1;font-size:17px;max-width:680px;margin-bottom:28px}
+.contact dl{display:grid;grid-template-columns:90px 1fr;gap:8px 16px;margin:0 0 32px;font-size:17px}
+.contact dt{color:#B5B5C0}.contact dd{margin:0}
+.contact a{color:#fff}
+.contact .btn.fill{background:#fff;color:var(--p-dark);border-color:#fff}
+.contact .btn.line{background:transparent;color:#fff;border-color:#fff}
+.contact .btn.line:hover{background:rgba(255,255,255,.12)}
+footer{background:var(--ink);color:#A9A9B4;font-size:14px;padding:0 0 36px;line-height:1.6}
+footer .wrap{border-top:1px solid #34343C;padding-top:22px}
+.top-btn{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;border:0;background:var(--p);color:#fff;cursor:pointer;display:none;align-items:center;justify-content:center;z-index:90}
+.top-btn.show{display:flex}
+
+.fade{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+.fade.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade{opacity:1;transform:none;transition:none}}
+
+/* tablet */
+@media (max-width:1100px){
+  .hero h1{font-size:40px}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  .metric{padding:22px 20px 24px 0 !important;border-left:0 !important}
+  .metric:nth-child(2n){padding-left:22px !important;border-left:1px solid var(--line) !important}
+  .curr{grid-template-columns:240px 1fr;gap:32px}
+  .skill{grid-template-columns:56px 1fr;}
+  .skill .evd{grid-column:2}
+  .course{grid-template-columns:repeat(2,1fr)}
+  .course div:nth-child(3){padding-left:0;border-left:0}
+  .course div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+/* mobile / narrow */
+@media (max-width:900px){
+  .wrap{padding:0 20px}
+  .menu{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;padding:8px 20px 16px}
+  .menu.open{display:flex}
+  .menu a{padding:14px 8px;font-size:16px}
+  .burger{display:inline-flex;align-items:center;justify-content:center}
+  .brand{font-size:14px}
+  .hero{padding:104px 0 40px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:32px}
+  .lead{font-size:16.5px}
+  .profile{display:grid;grid-template-columns:88px 1fr;column-gap:16px;border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:20px;align-items:start}
+  .profile img{width:88px;height:106px;margin:0;grid-row:1/5}
+  .curr{display:block}
+  .toc{display:none}
+  .mod{display:block}
+  .mod-head{display:block}
+  .mod .mod-body,.mod .mod-top{display:none}
+  .mod.open .mod-body,.mod.open .mod-top{display:block}
+  .mod-top h3{display:none}
+  .mod-top .one{font-size:16.5px}
+  section{padding:60px 0}
+  .sec-h h2,.contact h2{font-size:27px}
+  .ba,.two,.ai-grid{grid-template-columns:1fr;gap:24px}
+  .reason{grid-template-columns:1fr;gap:6px}
+  .plan{grid-template-columns:1fr}
+  .plan div,.plan div+div{padding:22px 0 6px;border-left:0}
+  .plan div+div{border-top:1px solid var(--line)}
+  .link-head{display:none}
+  .link-row{grid-template-columns:1fr;gap:4px;padding:18px 0}
+  .link-row .l::before{content:"기존 경험  ";font-size:14px;font-weight:700;color:var(--sub)}
+  .link-row .m{text-align:left;font-size:20px;transform:rotate(90deg);width:20px}
+  .link-row .r::before{content:"코드잇 AM 적용  ";font-size:14px;font-weight:700;color:var(--p)}
+  .link-row .l,.link-row .r{padding:0;display:block}
+  .link-row .l::before,.link-row .r::before{display:block}
+  .skill{grid-template-columns:1fr;gap:10px}
+  .skill .evd{grid-column:auto}
+  .skill .no{font-size:24px}
+  .metric .num{font-size:26px}
+  .contact dl{grid-template-columns:70px 1fr}
+}
+@media (max-width:520px){
+  .metrics{grid-template-columns:1fr}
+  .metric,.metric:nth-child(2n){padding:20px 0 !important;border-left:0 !important}
+  .course{grid-template-columns:1fr}
+  .course div,.course div+div{padding:14px 0;border-left:0 !important}
+  .course div+div{border-top:1px solid var(--line)}
+  .cta .btn{flex:1 1 100%}
+  .res div{min-width:0;flex:1 1 100%}
+  .res{gap:16px}
+}
+@media print{
+  .nav,.top-btn,.progress,.burger,.skip{display:none !important}
+  body{font-size:12pt}
+  section{padding:24px 0;break-inside:auto}
+  .hero{padding-top:12px}
+  .mod,.mod .mod-body,.mod .mod-top{display:block !important}
+  .mod-head{display:none !important}
+  .toc{display:none}.curr{display:block}
+  .fade{opacity:1 !important;transform:none !important}
+  .contact{background:#fff;color:#000}.contact .sub,.contact dt{color:#333}.contact a{color:#000}
+  footer{background:#fff;color:#333}
+  .btn,.btn-detail{display:none}
+  .blk,.skill,.reason,.link-row{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="nav" id="top-nav">
+  <div class="wrap">
+    <a class="brand" href="#top">이문규 <span>· B2B Account Management Portfolio</span></a>
+    <button class="burger" id="burger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="menu" id="menu" aria-label="주요 메뉴">
+      <a href="#overview" data-nav="overview">Overview</a>
+      <a href="#curriculum" data-nav="curriculum">Curriculum</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#ai" data-nav="ai">AI Practice</a>
+      <a href="#why" data-nav="why">Why Codeit</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+  </div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top" aria-labelledby="hero-title" data-group="overview">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">PORTFOLIO · CODEIT B2B EDUCATION AM</p>
+        <h1 id="hero-title">교육이 실제 업무 변화로 이어지도록,<br><em>고객의 문제를 운영으로</em> 연결합니다.</h1>
+        <p class="lead">제휴사 VOC를 시스템 개선으로, 이탈 신호를 리텐션으로, 고객의 우려를 도입과 온보딩으로 연결해 왔습니다. AI를 직접 배우고 서비스로 구현한 경험을 바탕으로 기업의 AX 교육이 실제 업무에 적용되도록 돕고 싶습니다.</p>
+        <div class="cta">
+          <a class="btn fill" href="#curriculum">커리큘럼 보기</a>
+        </div>
+      </div>
+      <aside class="profile" aria-label="프로필">
+        <img src="data:image/jpeg;base64,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" alt="이문규 프로필 사진" width="132" height="158">
+        <div class="nm">이문규</div>
+        <div class="rl">코드잇 기업교육 어카운트 매니저 지원</div>
+        <a href="mailto:moonkyu1541@naver.com">moonkyu1541@naver.com</a>
+        <a href="tel:01056294773">010-5629-4773</a>
+      </aside>
+    </div>
+    <dl class="course">
+      <div><dt>Track</dt><dd>B2B Account Management</dd></div>
+      <div><dt>Focus</dt><dd>Customer Success · Operations · AX Adoption</dd></div>
+      <div><dt>Experience</dt><dd>토스 · 두잇 · 쿠팡이츠 · 농협경제지주</dd></div>
+      <div><dt>AI Practice</dt><dd>앱인토스 미니앱 5개 · AX 해커톤 개인 프로젝트</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="overview" aria-labelledby="ov-title" data-group="overview">
+  <div class="wrap">
+    <div class="sec-h">
+      <p class="eyebrow">OVERVIEW</p>
+      <h2 id="ov-title">숫자로 먼저 보는 경험의 범위</h2>
+      <p>각 숫자 아래에 어떤 맥락에서 나온 값인지 함께 적었습니다. 팀 단위 결과와 개인이 맡은 역할은 구분해서 표시했습니다.</p>
+    </div>
+    <div class="metrics">
+      <div class="metric fade"><span class="tag">운영 규모</span><div class="num">약 150<small>개 제휴사</small></div><p class="ctx">토스 쿠폰·프로모션 채널의 광고·프로모션 운영 지원</p></div>
+      <div class="metric fade"><span class="tag">운영 규모</span><div class="num">월 400<small>건 이상</small></div><p class="ctx">토스 광고·프로모션 검수·승인</p></div>
+      <div class="metric fade"><span class="tag">개선 결과</span><div class="num">1주 이상 → 약 2일</div><p class="ctx">토스 광고 세팅 리드타임</p><span class="note">팀 단위 어드민 전환 결과 · 지원자는 VOC 정리, 요구사항 전달, QA, 안내를 담당</span></div>
+      <div class="metric fade"><span class="tag">파트너 관리</span><div class="num">하루 평균 3~5<small>곳</small></div><p class="ctx">두잇 이탈 위험군으로 분류해 우선 대응한 입점 스토어</p></div>
+      <div class="metric fade"><span class="tag">문의 대응</span><div class="num">하루 30<small>건 이상</small></div><p class="ctx">두잇 문의 우선순위 관리</p></div>
+      <div class="metric fade"><span class="tag">신규 도입</span><div class="num">34<small>건</small></div><p class="ctx">쿠팡이츠 누적 신규 계약</p></div>
+      <div class="metric fade"><span class="tag">데이터 관리</span><div class="num">월 10억 원 이상</div><p class="ctx">농협경제지주 B2B 거래·정산 관리 규모</p></div>
+      <div class="metric fade"><span class="tag">AI 실행 경험</span><div class="num">미니앱 5<small>개</small></div><p class="ctx">앱인토스에 실제 출시한 개인 프로젝트</p><span class="note">이용자 지표를 만든 프로젝트는 아닙니다</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="alt" id="skills" aria-labelledby="sk-title" data-group="overview">
+  <div class="wrap">
+    <div class="sec-h">
+      <p class="eyebrow">CORE SKILLS</p>
+      <h2 id="sk-title">기업교육 AM 업무 흐름으로 정리한 다섯 가지 역량</h2>
+      <p>코드잇 공고의 업무 흐름(사전 기획, 운영, 모니터링, 리텐션, 관계 유지)에 맞춰 경험을 나눴습니다.</p>
+    </div>
+    <div>
+      <article class="skill fade"><div class="no">01</div><div><h3>고객사 커뮤니케이션</h3><ul><li>외부 파트너의 요구와 불편 확인</li><li>내부 정책과 가능한 대안 설명</li><li>장기적인 관계와 운영 지속 지원</li></ul></div><div class="evd"><p class="ev">근거 경험</p><ul class="chips"><li>토스 제휴사 문의 대응</li><li>두잇 사장님 이탈 방어</li><li>쿠팡이츠 사업자 계약·온보딩</li><li>농협 거래처·생산업체·편의점 담당자 조율</li></ul></div></article>
+      <article class="skill fade"><div class="no">02</div><div><h3>교육·서비스 운영</h3><ul><li>사전 조건 확인</li><li>등록 및 검수</li><li>운영 중 모니터링</li><li>문제 발생 시 우선순위 판단</li><li>사후 기록과 개선</li></ul></div><div class="evd"><p class="ev">근거 경험</p><ul class="chips"><li>토스 광고 검수·승인</li><li>두잇 하루 30건 이상 문의 우선순위 판단</li><li>쿠팡이츠 초기 온보딩</li><li>농협 정산 및 프로모션 운영</li></ul></div></article>
+      <article class="skill fade"><div class="no">03</div><div><h3>데이터와 피드백 기반 개선</h3><ul><li>이상 데이터 확인</li><li>고객 VOC 유형화</li><li>반복 문제의 원인 정리</li><li>내부 개선 요구사항 전달</li></ul></div><div class="evd"><p class="ev">근거 경험</p><ul class="chips"><li>토스 광고 데이터 이상 확인</li><li>어드민 개선 요구사항 및 QA</li><li>농협 Excel 검증 양식</li><li>두잇 리뷰 분석</li></ul></div></article>
+      <article class="skill fade"><div class="no">04</div><div><h3>리텐션과 확장</h3><ul><li>이탈 위험 신호 확인</li><li>원인별 대안 제시</li><li>운영 지속 가능성 판단</li><li>추가 참여 또는 후속 프로그램 제안</li></ul></div><div class="evd"><p class="ev">근거 경험</p><ul class="chips"><li>두잇 입점 스토어 이탈 방어</li><li>바로도착·큐레이션 참여 설득</li><li>토스 추가 광고 상품 AM 인계</li><li>쿠팡이츠 신규 채널 도입 설득</li></ul></div></article>
+      <article class="skill fade"><div class="no">05</div><div><h3>문서화와 협업</h3><ul><li>가이드 제작</li><li>CRM 기록</li><li>업무 기준 통일</li><li>개발·영업·디자인·CX·재무 등 유관 조직 조율</li></ul></div><div class="evd"><p class="ev">근거 경험</p><ul class="chips"><li>토스 광고 신청 가이드</li><li>쿠팡이츠 개인 CRM</li><li>농협 검증 양식과 정산보고</li><li>신한신용정보 영업 지원</li></ul></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum" aria-labelledby="cur-title" data-group="curriculum">
+  <div class="wrap">
+    <div class="sec-h">
+      <p class="eyebrow">CURRICULUM</p>
+      <h2 id="cur-title">고객의 문제를 발견하고, 도입·운영·개선·리텐션까지 연결한 실무 커리큘럼</h2>
+      <p>경력을 다섯 개의 모듈로 나눴습니다. 모듈마다 현장에서 마주친 문제와 제가 맡은 역할, 코드잇 AM 업무와의 연결을 함께 적었습니다.</p>
+    </div>
+    <div class="curr">
+      <nav class="toc" aria-label="커리큘럼 목차">
+        <ol role="tablist" aria-orientation="vertical">
+          <li><button role="tab" id="tab-0" aria-controls="mod-0" aria-selected="true"><b>MODULE 01</b>VOC를 운영 시스템으로 바꾸기</button></li>
+          <li><button role="tab" id="tab-1" aria-controls="mod-1" aria-selected="false"><b>MODULE 02</b>이탈 신호를 리텐션 액션으로 바꾸기</button></li>
+          <li><button role="tab" id="tab-2" aria-controls="mod-2" aria-selected="false"><b>MODULE 03</b>고객의 우려를 도입과 온보딩으로 연결하기</button></li>
+          <li><button role="tab" id="tab-3" aria-controls="mod-3" aria-selected="false"><b>MODULE 04</b>데이터를 공통 운영 기준으로 만들기</button></li>
+          <li><button role="tab" id="tab-4" aria-controls="mod-4" aria-selected="false"><b>MODULE 05</b>AI를 배우는 사람에서 직접 만드는 사람으로</button></li>
+        </ol>
+      </nav>
+      <div class="panels">
+
+        <!-- MODULE 01 -->
+        <article class="mod open" id="mod-0" role="tabpanel" aria-labelledby="tab-0">
+          <button class="mod-head" aria-expanded="true"><b>MODULE 01</b><span>VOC를 운영 시스템으로 바꾸기</span></button>
+          <div class="mod-top"><p class="co">비바리퍼블리카(토스) · Sales Operations Specialist · 2024.03 - 2025.01</p><h3>VOC를 운영 시스템으로 바꾸기</h3><p class="one">약 150개 제휴사의 반복 문의를 정리하고, 광고 신청 어드민 전환과 운영 기준 수립에 참여했습니다.</p></div>
+          <div class="mod-body">
+            <div class="blk"><h4>어떤 문제였나</h4><p>광고 신청이 PDF·이미지 이메일 수령과 수기 등록에 의존했습니다. 수정 요청이 생기면 같은 과정이 반복됐고, 성과 데이터 갱신이 늦으면 제휴사 문의로 이어졌습니다.</p></div>
+            <div class="blk"><h4>제가 맡은 핵심 역할</h4><ul class="ul"><li>반복 VOC를 유형별로 정리하고 현재 문제와 예상 비즈니스 영향을 요구사항으로 전달</li><li>개발 전 위클리 미팅에서 보완 사항을 협의하고, 개발 후 실제 운영 상황을 기준으로 QA</li><li>제휴사용 광고 신청 가이드 제작과 바뀐 운영 정책 안내</li></ul></div>
+            <div class="blk"><h4>대표 성과</h4><div class="res"><div><b>1주 이상 → 약 2일</b><span>광고 세팅 리드타임 · 팀 단위 어드민 전환 결과</span></div><div><b>30~60분 → 5분 이내</b><span>일반 소재 변경 · 팀 단위 어드민 전환 결과</span></div></div><p class="warn">위 결과는 팀 단위 어드민 전환의 성과입니다. 지원자는 VOC 정리, 요구사항 전달, QA, 제휴사 안내를 맡았습니다.</p></div>
+            <div class="callout"><b>코드잇 AM 연결</b><p>교육 담당자의 반복 문의와 운영 이슈를 유형화하고, 내부 개선 과제로 전달하며, 변경된 이용 방법을 고객에게 안내하는 업무에 연결할 수 있습니다.</p></div>
+            <div class="details-box"><span class="dt">DETAILS</span><p>노션에서 광고 등록 방식의 변경 전·후 업무 단계, 광고 데이터 이상 확인 순서, 개발팀과의 요구사항 협의와 QA 과정, 시행착오와 개선 과정을 확인할 수 있습니다.</p></div>
+            <a class="btn-detail" data-link="toss" href="https://app.notion.com/p/41d5db893fbb81e49708e8ddb5697145?pvs=204" target="_blank" rel="noopener noreferrer"><span class="lbl">B2B 고객 운영·어드민 전환 상세 보기 <span aria-hidden="true">↗</span></span><span class="sr"> (새 탭에서 열림)</span></a>
+          </div>
+        </article>
+
+        <!-- MODULE 02 -->
+        <article class="mod" id="mod-1" role="tabpanel" aria-labelledby="tab-1">
+          <button class="mod-head" aria-expanded="false"><b>MODULE 02</b><span>이탈 신호를 리텐션 액션으로 바꾸기</span></button>
+          <div class="mod-top"><p class="co">두잇 · Account Manager · 2025.09 - 2025.10 (근무 기간 약 2개월 · 회사 구조조정으로 종료)</p><h3>이탈 신호를 리텐션 액션으로 바꾸기</h3><p class="one">하루 평균 3~5곳의 이탈 위험 스토어를 확인하고, 원인에 맞는 대안을 제시해 운영 지속을 지원했습니다.</p></div>
+          <div class="mod-body">
+            <div class="blk"><h4>어떤 문제였나</h4><p>수수료 인상 이후 운영 중단을 요청하는 입점 스토어가 늘었고, 하루 평균 3~5곳이 이탈 위험군이었습니다. 모든 매장을 붙잡을 수는 없어 대응 우선순위가 필요했습니다.</p></div>
+            <div class="blk"><h4>제가 맡은 핵심 역할</h4><ul class="ul"><li>하루 30건 이상 문의를 매출 영향과 긴급도 기준으로 우선순위 판단</li><li>리뷰와 손익 구조를 보고 설득 가능성이 있는 매장을 골라 원인별 대안 제시</li><li>바로도착(15분 내 도착 서비스)과 큐레이션 참여 설득</li></ul></div>
+            <div class="blk"><h4>대표 성과</h4><div class="res"><div><b>하루 평균 3~5곳</b><span>이탈 위험군으로 분류해 우선 대응</span></div><div><b>일평균 약 1곳</b><span>지원 기간 중 실제 이탈</span></div><div><b>90% · 95%</b><span>큐레이션 · 바로도착 가동률</span></div></div><p class="warn">이탈 수치는 지원 기간 중 운영 결과이며 지원자 한 사람의 성과로 단정하지 않습니다. 가동률은 5인 운영팀의 공동 성과입니다.</p></div>
+            <div class="callout"><b>코드잇 AM 연결</b><p>교육 참여율과 만족도, 담당자 피드백을 함께 확인해 이탈 가능성을 조기에 발견하고, 원인에 맞는 후속 교육이나 운영 대안을 제안하는 업무에 연결할 수 있습니다.</p></div>
+            <div class="details-box"><span class="dt">DETAILS</span><p>노션에서 김치찜 매장 리뷰 개선 사례의 전체 과정, 수수료 인상 때 대응 대상을 고른 기준, 바로도착 참여를 설득한 논리, 판단 과정과 시행착오를 확인할 수 있습니다.</p></div>
+            <a class="btn-detail" data-link="doit" href="https://app.notion.com/p/41d5db893fbb81909348eaf81aeb278e?pvs=204" target="_blank" rel="noopener noreferrer"><span class="lbl">고객 리텐션·참여 확대 상세 보기 <span aria-hidden="true">↗</span></span><span class="sr"> (새 탭에서 열림)</span></a>
+          </div>
+        </article>
+
+        <!-- MODULE 03 -->
+        <article class="mod" id="mod-2" role="tabpanel" aria-labelledby="tab-2">
+          <button class="mod-head" aria-expanded="false"><b>MODULE 03</b><span>고객의 우려를 도입과 온보딩으로 연결하기</span></button>
+          <div class="mod-top"><p class="co">쿠팡이츠 · Sales Manager · 2025.05 - 2025.08</p><h3>고객의 우려를 도입과 온보딩으로 연결하기</h3><p class="one">무작위 방문 영업의 비효율을 발견하고 타깃 기준을 정리해 신규 사업장 34곳의 계약을 만들었습니다.</p></div>
+          <div class="mod-body">
+            <div class="blk"><h4>어떤 문제였나</h4><p>초기에는 무작위 방문 중심이라 약 20곳을 방문해야 계약 1건이 나왔습니다. 방문 전에 대상을 걸러내는 기준이 필요했습니다.</p></div>
+            <div class="blk"><h4>제가 맡은 핵심 역할</h4><ul class="ul"><li>온라인 판매·홍보 경험, 실제 재고, 배달 가능 지역, 신규 홍보 니즈로 타깃 기준 정리</li><li>사업자의 우려를 듣고 도입 가치를 다시 설명해 계약으로 연결</li><li>계약 이후 이미지 등록, 촬영 일정, 운영 조직과의 조율, 첫 테스트 주문까지 초기 온보딩 지원</li></ul></div>
+            <div class="blk"><h4>대표 성과</h4><div class="res"><div><b>34건</b><span>누적 신규 계약</span></div><div><b>약 20곳 → 약 10곳당 1건</b><span>타깃 기준을 적용한 소규모 파일럿</span></div></div><p class="warn">파일럿 수치는 작은 표본에서 확인한 값입니다. 일반화된 영업 전환율이나 조직 성과로 해석하지 않습니다.</p></div>
+            <div class="callout"><b>코드잇 AM 연결</b><p>기업 고객이 교육 도입을 망설이는 이유를 확인하고, 고객의 상황에 맞는 도입 가치를 설명하며 초기 운영까지 지원하는 업무에 연결할 수 있습니다.</p></div>
+            <div class="details-box"><span class="dt">DETAILS</span><p>노션에서 타깃 분류 기준의 세부 내용, 골동품 매장 사례의 설득 과정, 온보딩 지원 단계와 CRM 운영 방식, 시행착오와 개선 과정을 확인할 수 있습니다.</p></div>
+            <a class="btn-detail" data-link="coupang" href="https://app.notion.com/p/41d5db893fbb812db0cfecdd4ce5bc35?pvs=204" target="_blank" rel="noopener noreferrer"><span class="lbl">타깃 발굴·계약·온보딩 상세 보기 <span aria-hidden="true">↗</span></span><span class="sr"> (새 탭에서 열림)</span></a>
+          </div>
+        </article>
+
+        <!-- MODULE 04 -->
+        <article class="mod" id="mod-3" role="tabpanel" aria-labelledby="tab-3">
+          <button class="mod-head" aria-expanded="false"><b>MODULE 04</b><span>데이터를 공통 운영 기준으로 만들기</span></button>
+          <div class="mod-top"><p class="co">농협경제지주 · 정산 담당자 · 2022.08 - 2023.06</p><h3>데이터를 공통 운영 기준으로 만들기</h3><p class="one">ERP와 실제 입금액을 대조하는 Excel 검증 양식을 만들어 개인별 확인 방식을 공통 프로세스로 바꿨습니다.</p></div>
+          <div class="mod-body">
+            <div class="blk"><h4>어떤 문제였나</h4><p>정산 확인 방식이 담당자마다 달랐고, 회계 처리 후 ERP와 실제 입금액이 맞지 않으면 오류를 역산해서 찾아야 했습니다.</p></div>
+            <div class="blk"><h4>제가 맡은 핵심 역할</h4><ul class="ul"><li>ERP와 실제 입금액을 대조하는 Excel 검증 양식 제작</li><li>검증 방식을 일일 정산보고, 감사 제출 자료, 인수인계서에 기록</li><li>명절 선물세트 프로모션의 주문·생산·포장 조율과 중요 고객 CS 직접 확인</li></ul></div>
+            <div class="blk"><h4>대표 성과</h4><div class="res"><div><b>월 10억 원 이상</b><span>B2B 거래·정산 관리 규모</span></div><div><b>2명</b><span>정산 담당자가 같은 양식 사용</span></div><div><b>약 110개 · 20개 미만</b><span>선물세트 최종 주문량 · 판매하지 못한 수량</span></div></div></div>
+            <div class="callout"><b>코드잇 AM 연결</b><p>고객별 교육 참여율·만족도·운영 이슈를 공통 기준으로 정리하고, 재계약과 후속 프로그램 제안에 활용할 수 있는 관리 체계를 만드는 업무에 연결할 수 있습니다.</p></div>
+            <div class="details-box"><span class="dt">DETAILS</span><p>노션에서 Excel 검증 양식의 구성과 TRUE/FALSE 검증 과정, 도입 전후 변화, 선물세트 생산량 산정 방식과 포장 판단 과정, 시행착오와 개선 과정을 확인할 수 있습니다.</p></div>
+            <a class="btn-detail" data-link="nonghyup" href="https://app.notion.com/p/41d5db893fbb81548743e03b80d9a3cb?pvs=204" target="_blank" rel="noopener noreferrer"><span class="lbl">데이터 검증·프로젝트 운영 상세 보기 <span aria-hidden="true">↗</span></span><span class="sr"> (새 탭에서 열림)</span></a>
+          </div>
+        </article>
+
+        <!-- MODULE 05 -->
+        <article class="mod" id="mod-4" role="tabpanel" aria-labelledby="tab-4">
+          <button class="mod-head" aria-expanded="false"><b>MODULE 05</b><span>AI를 배우는 사람에서 직접 만드는 사람으로</span></button>
+          <div class="mod-top"><p class="co">2026.03–현재 · 개인 프로젝트 및 학습</p><h3>AI를 배우는 사람에서 직접 만드는 사람으로</h3><p class="one">비개발자로서 AI 코딩 도구를 활용해 앱인토스 미니앱 5개를 출시하고, AX 해커톤에서 Codex Plugin 프로토타입을 제작했습니다.</p></div>
+          <div class="mod-body">
+            <div class="blk"><h4>어떤 문제였나</h4><p>AI 기능을 아는 것과 자신의 업무에 실제로 적용하는 것은 다른 문제였습니다. 이를 직접 확인하려고 비개발자로서 서비스를 만들어 봤습니다.</p></div>
+            <div class="blk"><h4>제가 맡은 핵심 역할</h4><ul class="ul"><li>Claude Code·Codex·Cursor로 앱인토스 미니앱 5개를 구현해 출시</li><li>소리·터치·UI 오류는 원인을 직접 확인해 AI에 다시 요청하고, 결과는 사람이 검증</li><li>AX 해커톤 개인 프로젝트로 Codex Plugin 프로토타입 제작</li></ul></div>
+            <div class="blk"><h4>대표 성과</h4><div class="res"><div><b>미니앱 5개</b><span>앱인토스 실제 출시</span></div></div><p class="warn">이용자 지표나 리텐션 성과를 만든 프로젝트는 아닙니다. 개인 프로젝트와 학습 경험이며, 회사 업무에 도입해 정량 성과를 낸 사례가 아닙니다.</p></div>
+            <div class="callout"><b>코드잇 AM 연결</b><p>AI를 처음 배우는 사람의 어려움과 실제 업무 적용 과정의 차이를 경험했기 때문에, 고객사의 교육이 수강에 그치지 않고 업무 활용으로 이어지도록 지원할 수 있습니다.</p></div>
+            <div class="details-box"><span class="dt">DETAILS</span><p>노션에서 미니앱 5개의 개별 설명, 개발 과정, 오류를 확인하고 수정한 과정, AX 해커톤 프로젝트의 문제 정의와 검증 방식을 확인할 수 있습니다.</p></div>
+            <a class="btn-detail" data-link="ai" href="https://app.notion.com/p/41d5db893fbb81e4865fc07534527cd1?pvs=204" target="_blank" rel="noopener noreferrer"><span class="lbl">미니앱·AX 프로젝트 상세 보기 <span aria-hidden="true">↗</span></span><span class="sr"> (새 탭에서 열림)</span></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section class="alt" id="experience" aria-labelledby="ex-title" data-group="experience">
+  <div class="wrap">
+    <div class="sec-h">
+      <p class="eyebrow">EXPERIENCE → CODEIT AM</p>
+      <h2 id="ex-title">기존 경험이 코드잇 AM 업무에서 쓰이는 지점</h2>
+      <p>직접 해 본 일과, 그 일의 구조가 이어지는 기업교육 AM 업무를 나란히 적었습니다.</p>
+    </div>
+    <div role="list">
+      <div class="link-head" aria-hidden="true"><span>기존 경험</span><span></span><span>코드잇 AM 업무</span></div>
+      <div class="link-row" role="listitem"><div class="l">광고·프로모션 검수와 운영, 데이터 이상 확인</div><div class="m" aria-label="연결">→</div><div class="r">교육 프로젝트의 사전 점검과 운영, 참여율·만족도 등 운영 데이터 모니터링</div></div>
+      <div class="link-row" role="listitem"><div class="l">제휴사 VOC 분석과 어드민 개선</div><div class="m" aria-label="연결">→</div><div class="r">교육 담당자 피드백 분석과 반복 이슈 개선</div></div>
+      <div class="link-row" role="listitem"><div class="l">입점 스토어 참여 확대와 이탈 방어</div><div class="m" aria-label="연결">→</div><div class="r">고객사별 리텐션 관리와 갱신·후속 프로그램 제안</div></div>
+      <div class="link-row" role="listitem"><div class="l">신규 사업장 발굴·계약·온보딩</div><div class="m" aria-label="연결">→</div><div class="r">기업 고객 니즈 파악과 교육 도입 지원</div></div>
+      <div class="link-row" role="listitem"><div class="l">하루 30건 이상 문의의 우선순위 판단, 문서화, 거래처·내부 부서 조율</div><div class="m" aria-label="연결">→</div><div class="r">여러 고객사 프로젝트의 우선순위 조정, 고객 이력 문서화, 고객사·강사·콘텐츠·내부 조직 일정 관리</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AI -->
+<section id="ai" aria-labelledby="ai-title" data-group="ai">
+  <div class="wrap">
+    <div class="sec-h">
+      <p class="eyebrow">AI PRACTICE</p>
+      <h2 id="ai-title">AI를 설명하기 전에, 직접 배우고 만들어 봤습니다.</h2>
+    </div>
+    <div class="ai-grid">
+      <div>
+        <p>저는 개발자가 아니라 비개발자입니다. 그래서 AI 도구로 서비스를 만들 때 어디서 막히는지, 무엇을 직접 확인해야 하는지를 학습자의 입장에서 겪었습니다.</p>
+        <p>기능을 아는 것과 내 업무에 적용하는 것은 달랐습니다. 소리가 빠지거나 글자 크기가 틀어질 때마다 원인을 직접 확인해 다시 요청했고, AI의 결과를 그대로 믿지 않고 사람이 검증해야 한다는 점을 배웠습니다.</p>
+        <p>이 경험은 기업마다 업무 환경과 과제가 다르기 때문에, 획일적인 내용보다 맞춤형 교육이 필요하다는 생각으로 이어졌습니다. AI 교육을 도입하는 과정에서 학습자가 느끼는 부담과 거부감도 이해할 수 있다고 생각합니다.</p>
+      </div>
+      <div class="tools">
+        <h3>활용 도구</h3>
+        <ul class="chips"><li>Claude Code</li><li>Codex</li><li>Cursor</li><li>Notion</li><li>Slack</li><li>Google Workspace</li><li>MS Office</li></ul>
+        <h3>출시한 미니앱 5개</h3>
+        <ul class="chips"><li>퍼뜩</li><li>댕댕이엉덩이톡톡</li><li>강아지소개서</li><li>나의수박일지</li><li>타이밍뽑기</li></ul>
+        <p style="font-size:15px;color:var(--sub);margin:-8px 0 22px">앱별 설명은 노션에서 확인할 수 있습니다.</p>
+        <h3>MCP</h3>
+        <p style="font-size:16px">Notion·Slack·메일·일정 도구를 연결하는 구조를 학습하고, 개인 환경에서 실험했습니다. 회사 업무를 자동화한 경험은 아닙니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="alt" id="why" aria-labelledby="why-title" data-group="why">
+  <div class="wrap">
+    <div class="sec-h"><p class="eyebrow">WHY CODEIT</p><h2 id="why-title">왜 코드잇 기업교육 AM인가</h2></div>
+    <p class="why-intro">AI를 실제 업무에 적용해 본 학습자이면서, 여러 파트너의 서비스 도입과 운영을 지원해 본 경험이 기업교육 AM과 연결된다고 판단했습니다.</p>
+    <div>
+      <div class="reason"><div class="n">첫째</div><div><h3>AI 학습자의 어려움을 직접 경험했습니다.</h3><ul class="ul"><li>AI 기능을 배우는 것과 자신의 업무에 적용하는 것은 달랐습니다.</li><li>비용과 학습 일정은 직장인의 교육 참여에 영향을 줍니다.</li><li>획일적인 내용보다 기업의 업무 환경과 과제에 맞는 교육이 필요하다고 생각합니다.</li></ul></div></div>
+      <div class="reason"><div class="n">둘째</div><div><h3>고객의 도입과 운영을 끝까지 지원해 왔습니다.</h3><ul class="ul"><li>토스: 제휴사 광고 운영과 반복 VOC 개선</li><li>두잇: 참여 확대와 이탈 방어</li><li>쿠팡이츠: 신규 계약과 초기 온보딩</li><li>농협: 거래처·생산업체·유통채널 조율</li></ul></div></div>
+      <div class="reason"><div class="n">셋째</div><div><h3>AI와 기업 사이에는 이를 연결하고 설득하는 사람이 필요합니다.</h3><p style="margin-bottom:10px">기능과 예상 효과만으로 기업의 도입이 결정되지는 않습니다.</p><ul class="ul"><li>변화에 대한 부담</li><li>기존 업무 방식에 대한 익숙함</li><li>교육 참여자의 거부감</li><li>의사결정권자의 우선순위</li></ul><p style="margin-top:10px">영업과 AM은 합리적인 조건뿐 아니라 고객의 감정적인 우려와 조직 사정까지 이해해야 한다고 생각합니다.</p></div></div>
+    </div>
+    <p class="close">AI를 직접 배우고 적용한 경험과 파트너를 설득하고 운영해 온 경험을 연결해, 고객사의 AX 과정에 끝까지 함께하는 코드잇 기업교육 AM으로 성장하겠습니다.</p>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan" aria-labelledby="plan-title" data-group="why">
+  <div class="wrap">
+    <div class="sec-h"><p class="eyebrow">AFTER JOINING</p><h2 id="plan-title">합류 후 기여 방향</h2></div>
+    <div class="plan">
+      <div><b>STEP 01 · LEARN</b><h3>먼저 정확히 배웁니다</h3><ul class="ul"><li>코드잇 기업교육 상품 이해</li><li>고객 유형별 운영 방식 파악</li><li>현재 고객 관리 기준 학습</li><li>내부 협업 구조와 커뮤니케이션 방식 익히기</li></ul></div>
+      <div><b>STEP 02 · OPERATE</b><h3>고객사 운영을 살핍니다</h3><ul class="ul"><li>고객사 교육 운영 현황 확인</li><li>참여율·만족도·담당자 피드백 모니터링</li><li>반복 문의와 운영 이슈 정리</li><li>여러 고객사 프로젝트의 우선순위 관리</li></ul></div>
+      <div><b>STEP 03 · EXPAND</b><h3>다음 교육으로 잇습니다</h3><ul class="ul"><li>기업별 교육 목적과 실제 활용 결과 파악</li><li>후속 교육 가능성 확인</li><li>프로그램 확장 제안 근거 정리</li><li>재계약과 추가 교육 요청에 활용할 수 있는 고객 관리 기준 정리에 기여</li></ul></div>
+    </div>
+    <p class="plan-note">내부 상황을 아직 알지 못하기 때문에 특정 제도를 먼저 만들겠다고 약속하지 않습니다. 충분히 업무를 이해한 뒤에 기여하겠습니다.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-labelledby="ct-title" data-group="contact">
+  <div class="wrap">
+    <p class="eyebrow">CONTACT</p>
+    <h2 id="ct-title">이문규</h2>
+    <p class="sub">고객사의 교육이 수강으로 끝나지 않고, 실제 업무 변화와 다음 학습으로 이어지도록 돕겠습니다.</p>
+    <dl>
+      <dt>지원</dt><dd>코드잇 기업교육 어카운트 매니저</dd>
+      <dt>이메일</dt><dd><a href="mailto:moonkyu1541@naver.com">moonkyu1541@naver.com</a></dd>
+      <dt>전화</dt><dd><a href="tel:01056294773">010-5629-4773</a></dd>
+    </dl>
+    <div class="cta" style="margin-top:0">
+      <a class="btn fill" href="mailto:moonkyu1541@naver.com">이메일 보내기</a>
+      <a class="btn line" href="#top" id="to-top">맨 위로 이동</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">이 페이지는 코드잇 기업교육 어카운트 매니저 지원을 위해 이문규가 직접 만든 포트폴리오이며, 코드잇의 공식 페이지가 아닙니다. 실제 내부 화면이나 자료는 포함하지 않았고, 업무 구조를 재구성한 도식만 사용했습니다.</div>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="맨 위로 이동">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script>
+(function(){
+  /* 노션 링크 적용: portfolioLinks 값을 버튼과 카드 링크에 동일하게 연결 */
+  document.querySelectorAll('[data-link]').forEach(function(a){
+    var url = portfolioLinks[a.dataset.link];
+    if(typeof url === 'string' && /^https:\/\//i.test(url)){
+      a.href = url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    }
+  });
+
+  /* 모바일 메뉴 */
+  var burger = document.getElementById('burger'), menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){
+    var o = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? '메뉴 닫기' : '메뉴 열기');
+  });
+  menu.addEventListener('click', function(e){ if(e.target.tagName==='A'){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }});
+
+  /* 커리큘럼: 데스크톱 탭 / 모바일 아코디언 */
+  var mods = Array.prototype.slice.call(document.querySelectorAll('.mod'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.toc button'));
+  function openMod(i, scroll){
+    mods.forEach(function(m,j){
+      var on = (i===j); m.classList.toggle('open', on);
+      var h = m.querySelector('.mod-head'); if(h) h.setAttribute('aria-expanded', on);
+    });
+    tabs.forEach(function(t,j){ t.setAttribute('aria-selected', i===j); });
+  }
+  tabs.forEach(function(t,i){ t.addEventListener('click', function(){ openMod(i); }); });
+  mods.forEach(function(m,i){
+    m.querySelector('.mod-head').addEventListener('click', function(){
+      if(m.classList.contains('open')){ m.classList.remove('open'); this.setAttribute('aria-expanded','false'); }
+      else { openMod(i); }
+    });
+  });
+  document.querySelectorAll('[data-open-module]').forEach(function(a){ a.addEventListener('click', function(){ openMod(+a.dataset.openModule); }); });
+
+  /* 현재 섹션 메뉴 활성화 */
+  var secs = Array.prototype.slice.call(document.querySelectorAll('section[data-group]'));
+  var links = {}; document.querySelectorAll('.menu a').forEach(function(a){ links[a.dataset.nav] = a; });
+  function setActive(){
+    var y = window.scrollY + 120, cur = 'overview';
+    secs.forEach(function(s){ if(s.offsetTop <= y) cur = s.dataset.group; });
+    if(window.innerHeight + window.scrollY >= document.body.scrollHeight - 4) cur = 'contact';
+    Object.keys(links).forEach(function(k){ links[k].classList.toggle('on', k===cur); if(k===cur) links[k].setAttribute('aria-current','true'); else links[k].removeAttribute('aria-current'); });
+  }
+  /* 진행률 + 맨 위 버튼 */
+  var bar = document.getElementById('progress'), topBtn = document.getElementById('topBtn');
+  function onScroll(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h>0 ? Math.min(100, window.scrollY / h * 100) : 0) + '%';
+    topBtn.classList.toggle('show', window.scrollY > 600);
+    setActive();
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); window.addEventListener('resize', onScroll); onScroll();
+  topBtn.addEventListener('click', function(){ window.scrollTo({top:0}); });
+
+  /* 짧은 fade-in */
+  var els = document.querySelectorAll('.fade');
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }}); }, {threshold:.1});
+    els.forEach(function(el){ io.observe(el); });
+  } else { els.forEach(function(el){ el.classList.add('in'); }); }
+})();
+</script>
+</body>
+</html>
